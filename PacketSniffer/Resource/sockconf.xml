@@ -1,0 +1,1 @@
+<antinatconfig><interface value="127.0.0.1"/><port value="${ssport}"/><maxbindwait value="10"/><authchoice><select mechanism="anonymous"/></authchoice><filter><accept/></filter></antinatconfig>
