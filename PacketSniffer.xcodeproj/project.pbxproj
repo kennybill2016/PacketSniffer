@@ -30,6 +30,7 @@
 		A74A23CB1DD0791C0027A2C3 /* PacketSniffer.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A23C71DD0791C0027A2C3 /* PacketSniffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A74A23CC1DD0791C0027A2C3 /* PacketSniffer.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A23C81DD0791C0027A2C3 /* PacketSniffer.m */; };
 		A74A23CF1DD07B1F0027A2C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74A23D11DD07B1F0027A2C3 /* Localizable.strings */; };
+		A74A23D41DD07D820027A2C3 /* PacketSniffer.action in Resources */ = {isa = PBXBuildFile; fileRef = A74A23D31DD07D820027A2C3 /* PacketSniffer.action */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		A74A23C81DD0791C0027A2C3 /* PacketSniffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketSniffer.m; sourceTree = "<group>"; };
 		A74A23D01DD07B1F0027A2C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A74A23D21DD07B210027A2C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A74A23D31DD07D820027A2C3 /* PacketSniffer.action */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PacketSniffer.action; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 		A74A23B41DD073390027A2C3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A74A23D31DD07D820027A2C3 /* PacketSniffer.action */,
 				A74A23B51DD073390027A2C3 /* geoip-CN.data */,
 				A74A23B61DD073390027A2C3 /* GeoLite2-Country.mmdb */,
 				A74A23B71DD073390027A2C3 /* sockconf.xml */,
@@ -351,6 +354,7 @@
 				A74A23BC1DD073390027A2C3 /* template.bundle in Resources */,
 				A74A23BA1DD073390027A2C3 /* GeoLite2-Country.mmdb in Resources */,
 				A74A237C1DD06F320027A2C3 /* Assets.xcassets in Resources */,
+				A74A23D41DD07D820027A2C3 /* PacketSniffer.action in Resources */,
 				A74A237A1DD06F320027A2C3 /* Main.storyboard in Resources */,
 				A74A23BB1DD073390027A2C3 /* sockconf.xml in Resources */,
 			);
@@ -680,6 +684,7 @@
 				A74A23981DD0710E0027A2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A74A23A81DD0718A0027A2C3 /* Build configuration list for PBXNativeTarget "PacketSnifferBase" */ = {
 			isa = XCConfigurationList;
@@ -688,6 +693,7 @@
 				A74A23AA1DD0718A0027A2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

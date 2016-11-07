@@ -187,6 +187,19 @@ extension Manager {
         try content.write(to: confURL, atomically: true, encoding: String.Encoding.utf8)
     }
     
+    func copyActionData() throws {
+        guard let fromURL = Bundle.main.url(forResource: "PacketSniffer", withExtension: "action") else {
+            return
+        }
+        let toURL = PacketSniffer.sharedUrl().appendingPathComponent("PacketSniffer.action")
+        if FileManager.default.fileExists(atPath: fromURL.path) {
+            if FileManager.default.fileExists(atPath: toURL.path) {
+                try FileManager.default.removeItem(at: toURL)
+            }
+            try FileManager.default.copyItem(at: fromURL, to: toURL)
+        }
+    }
+    
     func generateHttpProxyConfig() throws {
         let rootUrl = PacketSniffer.sharedUrl()
         let confDirUrl = rootUrl.appendingPathComponent("httpconf")
@@ -207,45 +220,13 @@ extension Manager {
         mainConf["logdir"] = logDir as AnyObject?
         mainConf["global-mode"] = 0 as AnyObject?//defaultToProxy
 //        mainConf["debug"] = 1024+65536+1
-//        mainConf["debug"] = 131071
+        mainConf["debug"] = 131071 as AnyObject?
 
         let mainContent = mainConf.map { "\($0) \($1)"}.joined(separator: "\n")
         try mainContent.write(to: PacketSniffer.sharedHttpProxyConfUrl(), atomically: true, encoding: String.Encoding.utf8)
-/*
-        var actionContent: [String] = []
-        var forwardRules: [String] = []
-        let rules = defaultConfigGroup.ruleSets.map({ $0.rules }).flatMap({ $0 })
-        var hasGEOIPRule = false
-        for rule in rules {
-            switch rule.type {
-            case .GeoIP, .IPCIDR:
-                if rule.type == .GeoIP {
-                    if hasGEOIPRule {
-                        continue
-                    }
-                    hasGEOIPRule = true
-                }
-                actionContent.append("{+forward-rule}")
-                actionContent.append(rule.description)
-            default:
-                forwardRules.append(rule.description)
-            }
-        }
-
-        actionContent.append("{+forward-rule}")
-        actionContent.appendContentsOf(forwardRules)
-
-        // DNS pollution
-        if let _ = upstreamProxy {
-            actionContent.append("{+forward-rule}")
-            actionContent.appendContentsOf(Pollution.dnsList.map({ "IP-CIDR, \($0)/32, PROXY" }))
-        }
-
-        let userActionString = actionContent.joinWithSeparator("\n")
-        let userActionUrl = confDirUrl.URLByAppendingPathComponent("potatso.action")
-        try userActionString.writeToFile(userActionUrl.path!, atomically: true, encoding: NSUTF8StringEncoding)*/
+        
+        try copyActionData()
     }
-
 }
 
 extension Manager {
