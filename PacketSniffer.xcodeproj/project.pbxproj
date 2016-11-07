@@ -655,8 +655,8 @@
 			isa = PBXGroup;
 			children = (
 				A74A23731DD06F320027A2C3 /* PacketSniffer */,
-				A74A23A01DD0718A0027A2C3 /* PacketSnifferBase */,
 				A74A23DB1DD07FCE0027A2C3 /* PacketTunnel */,
+				A74A23A01DD0718A0027A2C3 /* PacketSnifferBase */,
 				A74A23721DD06F320027A2C3 /* Products */,
 				A74A26041DD085DE0027A2C3 /* Frameworks */,
 			);
@@ -2023,6 +2023,7 @@
 				A74A23E71DD07FCE0027A2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

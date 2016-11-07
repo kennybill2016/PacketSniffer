@@ -318,7 +318,7 @@ extension Manager {
                 manager.protocolConfiguration?.serverAddress = "PacketSniffer"
                 manager.isOnDemandEnabled = true
                 let quickStartRule = NEOnDemandRuleEvaluateConnection()
-//                quickStartRule.connectionRules = [NEEvaluateConnectionRule(matchDomains: ["packetsniffer.com"], andAction: NEEvaluateConnectionRuleAction.connectIfNeeded)]
+                quickStartRule.connectionRules = [NEEvaluateConnectionRule(matchDomains: ["packetsniffer.com"], andAction: NEEvaluateConnectionRuleAction.connectIfNeeded)]
                 manager.onDemandRules = [quickStartRule]
                 manager.saveToPreferences(completionHandler: { (error) -> Void in
                     if let error = error {
