@@ -17,7 +17,6 @@
 		A74A23A31DD0718A0027A2C3 /* PacketSnifferBase.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A23A11DD0718A0027A2C3 /* PacketSnifferBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A74A23A61DD0718A0027A2C3 /* PacketSnifferBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A239F1DD0718A0027A2C3 /* PacketSnifferBase.framework */; };
 		A74A23A71DD0718A0027A2C3 /* PacketSnifferBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A74A239F1DD0718A0027A2C3 /* PacketSnifferBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A74A23B01DD072E90027A2C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74A23B21DD072E90027A2C3 /* Localizable.strings */; };
 		A74A23B91DD073390027A2C3 /* geoip-CN.data in Resources */ = {isa = PBXBuildFile; fileRef = A74A23B51DD073390027A2C3 /* geoip-CN.data */; };
 		A74A23BA1DD073390027A2C3 /* GeoLite2-Country.mmdb in Resources */ = {isa = PBXBuildFile; fileRef = A74A23B61DD073390027A2C3 /* GeoLite2-Country.mmdb */; };
 		A74A23BB1DD073390027A2C3 /* sockconf.xml in Resources */ = {isa = PBXBuildFile; fileRef = A74A23B71DD073390027A2C3 /* sockconf.xml */; };
@@ -30,6 +29,7 @@
 		A74A23CA1DD0791C0027A2C3 /* JSONUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A23C61DD0791C0027A2C3 /* JSONUtils.m */; };
 		A74A23CB1DD0791C0027A2C3 /* PacketSniffer.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A23C71DD0791C0027A2C3 /* PacketSniffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A74A23CC1DD0791C0027A2C3 /* PacketSniffer.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A23C81DD0791C0027A2C3 /* PacketSniffer.m */; };
+		A74A23CF1DD07B1F0027A2C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74A23D11DD07B1F0027A2C3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +92,6 @@
 		A74A23A21DD0718A0027A2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A74A23AC1DD071E40027A2C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		A74A23AD1DD071E40027A2C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		A74A23B11DD072E90027A2C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		A74A23B31DD072EF0027A2C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A74A23B51DD073390027A2C3 /* geoip-CN.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "geoip-CN.data"; sourceTree = "<group>"; };
 		A74A23B61DD073390027A2C3 /* GeoLite2-Country.mmdb */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeoLite2-Country.mmdb"; sourceTree = "<group>"; };
 		A74A23B71DD073390027A2C3 /* sockconf.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sockconf.xml; sourceTree = "<group>"; };
@@ -106,6 +104,8 @@
 		A74A23C61DD0791C0027A2C3 /* JSONUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtils.m; sourceTree = "<group>"; };
 		A74A23C71DD0791C0027A2C3 /* PacketSniffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketSniffer.h; sourceTree = "<group>"; };
 		A74A23C81DD0791C0027A2C3 /* PacketSniffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketSniffer.m; sourceTree = "<group>"; };
+		A74A23D01DD07B1F0027A2C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A74A23D21DD07B210027A2C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 		A74A23681DD06F310027A2C3 = {
 			isa = PBXGroup;
 			children = (
-				A74A23B21DD072E90027A2C3 /* Localizable.strings */,
+				A74A23D11DD07B1F0027A2C3 /* Localizable.strings */,
 				A74A23731DD06F320027A2C3 /* PacketSniffer */,
 				A74A238D1DD0710E0027A2C3 /* PacketTunnel */,
 				A74A23A01DD0718A0027A2C3 /* PacketSnifferBase */,
@@ -327,6 +327,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = A74A23681DD06F310027A2C3;
 			productRefGroup = A74A23721DD06F320027A2C3 /* Products */;
@@ -347,7 +348,6 @@
 			files = (
 				A74A23B91DD073390027A2C3 /* geoip-CN.data in Resources */,
 				A74A237F1DD06F320027A2C3 /* LaunchScreen.storyboard in Resources */,
-				A74A23B01DD072E90027A2C3 /* Localizable.strings in Resources */,
 				A74A23BC1DD073390027A2C3 /* template.bundle in Resources */,
 				A74A23BA1DD073390027A2C3 /* GeoLite2-Country.mmdb in Resources */,
 				A74A237C1DD06F320027A2C3 /* Assets.xcassets in Resources */,
@@ -367,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74A23CF1DD07B1F0027A2C3 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,13 +438,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		A74A23B21DD072E90027A2C3 /* Localizable.strings */ = {
+		A74A23D11DD07B1F0027A2C3 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A74A23B11DD072E90027A2C3 /* zh-Hans */,
-				A74A23B31DD072EF0027A2C3 /* Base */,
+				A74A23D01DD07B1F0027A2C3 /* Base */,
+				A74A23D21DD07B210027A2C3 /* zh-Hans */,
 			);
 			name = Localizable.strings;
+			path = PacketSniffer;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

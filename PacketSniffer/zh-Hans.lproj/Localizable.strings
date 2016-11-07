@@ -5,3 +5,12 @@
   Created by lijinwei on 2016/11/7.
   Copyright © 2016年 ljw. All rights reserved.
 */
+"App Name" = "嗅探器";
+"Connect" = "连接";
+"Connected" = "已连接";
+"Disconnect" = "断开";
+"Start Request" = "开始请求";
+"Recent Requests" = "最近请求";
+"Request Detail" = "请求详情";
+"Request finished" = "请求结束";
+"You should manually refresh to see the request log." = "请手动刷新以查看请求日志.";

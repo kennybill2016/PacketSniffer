@@ -5,3 +5,12 @@
   Created by lijinwei on 2016/11/7.
   Copyright © 2016年 ljw. All rights reserved.
 */
+"App Name" = "PacketSniffer";
+"Connect" = "Connect";
+"Connected" = "Connected";
+"Disconnect" = "Disconnect";
+"Start Request" = "Start Request";
+"Recent Requests" = "Recent Requests";
+"Request Detail" = "Request Detail";
+"Request finished" = "Request finished";
+"You should manually refresh to see the request log." = "You should manually refresh to see the request log.";
