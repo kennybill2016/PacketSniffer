@@ -6,7 +6,7 @@
 //  Copyright © 2016年 ljw. All rights reserved.
 //
 
-import PacketLibrary
+import PacketSnifferBase
 import NetworkExtension
 
 public enum ManagerError: Error {
