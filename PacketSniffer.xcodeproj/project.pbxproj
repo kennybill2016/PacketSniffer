@@ -90,17 +90,25 @@
 		A74A25E11DD081E10027A2C3 /* UdpGwClient.c in Sources */ = {isa = PBXBuildFile; fileRef = A74A25A61DD081E10027A2C3 /* UdpGwClient.c */; };
 		A74A25E41DD082010027A2C3 /* TunnelInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25E21DD082010027A2C3 /* TunnelInterface.m */; };
 		A74A25E61DD083E30027A2C3 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A25E51DD083E30027A2C3 /* CocoaAsyncSocket.framework */; };
-		A74A25F71DD0841F0027A2C3 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25E91DD0841F0027A2C3 /* MMWormhole.m */; };
-		A74A25F81DD0841F0027A2C3 /* MMWormholeCoordinatedFileTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25EB1DD0841F0027A2C3 /* MMWormholeCoordinatedFileTransiting.m */; };
-		A74A25F91DD0841F0027A2C3 /* MMWormholeFileTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25ED1DD0841F0027A2C3 /* MMWormholeFileTransiting.m */; };
-		A74A25FA1DD0841F0027A2C3 /* MMWormholeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25EF1DD0841F0027A2C3 /* MMWormholeSession.m */; };
-		A74A25FB1DD0841F0027A2C3 /* MMWormholeSessionContextTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25F11DD0841F0027A2C3 /* MMWormholeSessionContextTransiting.m */; };
-		A74A25FC1DD0841F0027A2C3 /* MMWormholeSessionFileTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25F31DD0841F0027A2C3 /* MMWormholeSessionFileTransiting.m */; };
-		A74A25FD1DD0841F0027A2C3 /* MMWormholeSessionMessageTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25F51DD0841F0027A2C3 /* MMWormholeSessionMessageTransiting.m */; };
 		A74A26061DD085DE0027A2C3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A26051DD085DE0027A2C3 /* libresolv.tbd */; };
 		A74A26071DD086130027A2C3 /* ShadowPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A26031DD084A40027A2C3 /* ShadowPath.framework */; };
 		A74A9D761DD092DB00E45CC2 /* dns.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D751DD092DB00E45CC2 /* dns.m */; };
 		A74A9D771DD0962B00E45CC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74A23D11DD07B1F0027A2C3 /* Localizable.strings */; };
+		A74A9D8B1DD16E3400E45CC2 /* MMWormhole.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D7C1DD16E3400E45CC2 /* MMWormhole.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74A9D8C1DD16E3400E45CC2 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D7D1DD16E3400E45CC2 /* MMWormhole.m */; };
+		A74A9D8D1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D7E1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74A9D8E1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D7F1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.m */; };
+		A74A9D8F1DD16E3400E45CC2 /* MMWormholeFileTransiting.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D801DD16E3400E45CC2 /* MMWormholeFileTransiting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74A9D901DD16E3400E45CC2 /* MMWormholeFileTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D811DD16E3400E45CC2 /* MMWormholeFileTransiting.m */; };
+		A74A9D911DD16E3400E45CC2 /* MMWormholeSession.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D821DD16E3400E45CC2 /* MMWormholeSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74A9D921DD16E3400E45CC2 /* MMWormholeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D831DD16E3400E45CC2 /* MMWormholeSession.m */; };
+		A74A9D931DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D841DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74A9D941DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D851DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.m */; };
+		A74A9D951DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D861DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74A9D961DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D871DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.m */; };
+		A74A9D971DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D881DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74A9D981DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D891DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.m */; };
+		A74A9D991DD16E3400E45CC2 /* MMWormholeTransiting.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D8A1DD16E3400E45CC2 /* MMWormholeTransiting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -604,25 +612,25 @@
 		A74A25E21DD082010027A2C3 /* TunnelInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TunnelInterface.m; sourceTree = "<group>"; };
 		A74A25E31DD082010027A2C3 /* TunnelInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TunnelInterface.h; sourceTree = "<group>"; };
 		A74A25E51DD083E30027A2C3 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = "<group>"; };
-		A74A25E81DD0841F0027A2C3 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
-		A74A25E91DD0841F0027A2C3 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
-		A74A25EA1DD0841F0027A2C3 /* MMWormholeCoordinatedFileTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeCoordinatedFileTransiting.h; sourceTree = "<group>"; };
-		A74A25EB1DD0841F0027A2C3 /* MMWormholeCoordinatedFileTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeCoordinatedFileTransiting.m; sourceTree = "<group>"; };
-		A74A25EC1DD0841F0027A2C3 /* MMWormholeFileTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeFileTransiting.h; sourceTree = "<group>"; };
-		A74A25ED1DD0841F0027A2C3 /* MMWormholeFileTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeFileTransiting.m; sourceTree = "<group>"; };
-		A74A25EE1DD0841F0027A2C3 /* MMWormholeSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeSession.h; sourceTree = "<group>"; };
-		A74A25EF1DD0841F0027A2C3 /* MMWormholeSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeSession.m; sourceTree = "<group>"; };
-		A74A25F01DD0841F0027A2C3 /* MMWormholeSessionContextTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeSessionContextTransiting.h; sourceTree = "<group>"; };
-		A74A25F11DD0841F0027A2C3 /* MMWormholeSessionContextTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeSessionContextTransiting.m; sourceTree = "<group>"; };
-		A74A25F21DD0841F0027A2C3 /* MMWormholeSessionFileTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeSessionFileTransiting.h; sourceTree = "<group>"; };
-		A74A25F31DD0841F0027A2C3 /* MMWormholeSessionFileTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeSessionFileTransiting.m; sourceTree = "<group>"; };
-		A74A25F41DD0841F0027A2C3 /* MMWormholeSessionMessageTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeSessionMessageTransiting.h; sourceTree = "<group>"; };
-		A74A25F51DD0841F0027A2C3 /* MMWormholeSessionMessageTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeSessionMessageTransiting.m; sourceTree = "<group>"; };
-		A74A25F61DD0841F0027A2C3 /* MMWormholeTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeTransiting.h; sourceTree = "<group>"; };
 		A74A25FE1DD084A30027A2C3 /* ShadowPath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShadowPath.xcodeproj; path = ShadowPath/ShadowPath.xcodeproj; sourceTree = SOURCE_ROOT; };
 		A74A26051DD085DE0027A2C3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		A74A9D741DD092DB00E45CC2 /* dns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dns.h; sourceTree = "<group>"; };
 		A74A9D751DD092DB00E45CC2 /* dns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dns.m; sourceTree = "<group>"; };
+		A74A9D7C1DD16E3400E45CC2 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
+		A74A9D7D1DD16E3400E45CC2 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
+		A74A9D7E1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeCoordinatedFileTransiting.h; sourceTree = "<group>"; };
+		A74A9D7F1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeCoordinatedFileTransiting.m; sourceTree = "<group>"; };
+		A74A9D801DD16E3400E45CC2 /* MMWormholeFileTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeFileTransiting.h; sourceTree = "<group>"; };
+		A74A9D811DD16E3400E45CC2 /* MMWormholeFileTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeFileTransiting.m; sourceTree = "<group>"; };
+		A74A9D821DD16E3400E45CC2 /* MMWormholeSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeSession.h; sourceTree = "<group>"; };
+		A74A9D831DD16E3400E45CC2 /* MMWormholeSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeSession.m; sourceTree = "<group>"; };
+		A74A9D841DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeSessionContextTransiting.h; sourceTree = "<group>"; };
+		A74A9D851DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeSessionContextTransiting.m; sourceTree = "<group>"; };
+		A74A9D861DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeSessionFileTransiting.h; sourceTree = "<group>"; };
+		A74A9D871DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeSessionFileTransiting.m; sourceTree = "<group>"; };
+		A74A9D881DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeSessionMessageTransiting.h; sourceTree = "<group>"; };
+		A74A9D891DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeSessionMessageTransiting.m; sourceTree = "<group>"; };
+		A74A9D8A1DD16E3400E45CC2 /* MMWormholeTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeTransiting.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -698,6 +706,7 @@
 		A74A23A01DD0718A0027A2C3 /* PacketSnifferBase */ = {
 			isa = PBXGroup;
 			children = (
+				A74A9D7B1DD16E3400E45CC2 /* MMWormhole */,
 				A74A23C51DD0791C0027A2C3 /* JSONUtils.h */,
 				A74A23C61DD0791C0027A2C3 /* JSONUtils.m */,
 				A74A23C71DD0791C0027A2C3 /* PacketSniffer.h */,
@@ -729,7 +738,6 @@
 				A74A25E21DD082010027A2C3 /* TunnelInterface.m */,
 				A74A9D741DD092DB00E45CC2 /* dns.h */,
 				A74A9D751DD092DB00E45CC2 /* dns.m */,
-				A74A25E71DD0841F0027A2C3 /* MMWormhole */,
 				A74A25E51DD083E30027A2C3 /* CocoaAsyncSocket.framework */,
 				A74A23E91DD080B80027A2C3 /* ProxyManager.h */,
 				A74A23E81DD080B80027A2C3 /* ProxyManager.m */,
@@ -1401,28 +1409,6 @@
 			path = udpgw_client;
 			sourceTree = "<group>";
 		};
-		A74A25E71DD0841F0027A2C3 /* MMWormhole */ = {
-			isa = PBXGroup;
-			children = (
-				A74A25E81DD0841F0027A2C3 /* MMWormhole.h */,
-				A74A25E91DD0841F0027A2C3 /* MMWormhole.m */,
-				A74A25EA1DD0841F0027A2C3 /* MMWormholeCoordinatedFileTransiting.h */,
-				A74A25EB1DD0841F0027A2C3 /* MMWormholeCoordinatedFileTransiting.m */,
-				A74A25EC1DD0841F0027A2C3 /* MMWormholeFileTransiting.h */,
-				A74A25ED1DD0841F0027A2C3 /* MMWormholeFileTransiting.m */,
-				A74A25EE1DD0841F0027A2C3 /* MMWormholeSession.h */,
-				A74A25EF1DD0841F0027A2C3 /* MMWormholeSession.m */,
-				A74A25F01DD0841F0027A2C3 /* MMWormholeSessionContextTransiting.h */,
-				A74A25F11DD0841F0027A2C3 /* MMWormholeSessionContextTransiting.m */,
-				A74A25F21DD0841F0027A2C3 /* MMWormholeSessionFileTransiting.h */,
-				A74A25F31DD0841F0027A2C3 /* MMWormholeSessionFileTransiting.m */,
-				A74A25F41DD0841F0027A2C3 /* MMWormholeSessionMessageTransiting.h */,
-				A74A25F51DD0841F0027A2C3 /* MMWormholeSessionMessageTransiting.m */,
-				A74A25F61DD0841F0027A2C3 /* MMWormholeTransiting.h */,
-			);
-			path = MMWormhole;
-			sourceTree = "<group>";
-		};
 		A74A25FF1DD084A30027A2C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1439,6 +1425,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A74A9D7B1DD16E3400E45CC2 /* MMWormhole */ = {
+			isa = PBXGroup;
+			children = (
+				A74A9D7C1DD16E3400E45CC2 /* MMWormhole.h */,
+				A74A9D7D1DD16E3400E45CC2 /* MMWormhole.m */,
+				A74A9D7E1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.h */,
+				A74A9D7F1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.m */,
+				A74A9D801DD16E3400E45CC2 /* MMWormholeFileTransiting.h */,
+				A74A9D811DD16E3400E45CC2 /* MMWormholeFileTransiting.m */,
+				A74A9D821DD16E3400E45CC2 /* MMWormholeSession.h */,
+				A74A9D831DD16E3400E45CC2 /* MMWormholeSession.m */,
+				A74A9D841DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.h */,
+				A74A9D851DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.m */,
+				A74A9D861DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.h */,
+				A74A9D871DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.m */,
+				A74A9D881DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.h */,
+				A74A9D891DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.m */,
+				A74A9D8A1DD16E3400E45CC2 /* MMWormholeTransiting.h */,
+			);
+			path = MMWormhole;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1447,6 +1455,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74A23CB1DD0791C0027A2C3 /* PacketSniffer.h in Headers */,
+				A74A9D8F1DD16E3400E45CC2 /* MMWormholeFileTransiting.h in Headers */,
+				A74A9D8B1DD16E3400E45CC2 /* MMWormhole.h in Headers */,
+				A74A9D971DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.h in Headers */,
+				A74A9D951DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.h in Headers */,
+				A74A9D8D1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.h in Headers */,
+				A74A9D931DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.h in Headers */,
+				A74A9D911DD16E3400E45CC2 /* MMWormholeSession.h in Headers */,
+				A74A9D991DD16E3400E45CC2 /* MMWormholeTransiting.h in Headers */,
 				A74A23C91DD0791C0027A2C3 /* JSONUtils.h in Headers */,
 				A74A23A31DD0718A0027A2C3 /* PacketSnifferBase.h in Headers */,
 			);
@@ -1632,8 +1648,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74A9D941DD16E3400E45CC2 /* MMWormholeSessionContextTransiting.m in Sources */,
 				A74A23CA1DD0791C0027A2C3 /* JSONUtils.m in Sources */,
 				A74A23CC1DD0791C0027A2C3 /* PacketSniffer.m in Sources */,
+				A74A9D981DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.m in Sources */,
+				A74A9D901DD16E3400E45CC2 /* MMWormholeFileTransiting.m in Sources */,
+				A74A9D8E1DD16E3400E45CC2 /* MMWormholeCoordinatedFileTransiting.m in Sources */,
+				A74A9D8C1DD16E3400E45CC2 /* MMWormhole.m in Sources */,
+				A74A9D961DD16E3400E45CC2 /* MMWormholeSessionFileTransiting.m in Sources */,
+				A74A9D921DD16E3400E45CC2 /* MMWormholeSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1648,15 +1671,12 @@
 				A74A25DB1DD081E10027A2C3 /* BTime.c in Sources */,
 				A74A25BF1DD081E10027A2C3 /* icmp.c in Sources */,
 				A74A25BE1DD081E10027A2C3 /* init.c in Sources */,
-				A74A25F91DD0841F0027A2C3 /* MMWormholeFileTransiting.m in Sources */,
-				A74A25FD1DD0841F0027A2C3 /* MMWormholeSessionMessageTransiting.m in Sources */,
 				A74A25C81DD081E10027A2C3 /* mem.c in Sources */,
 				A74A25AF1DD081E10027A2C3 /* PacketPassConnector.c in Sources */,
 				A74A25AB1DD081E10027A2C3 /* BPending.c in Sources */,
 				A74A25C51DD081E10027A2C3 /* ip6_addr.c in Sources */,
 				A74A25DC1DD081E10027A2C3 /* BUnixSignal.c in Sources */,
 				A74A25CB1DD081E10027A2C3 /* pbuf.c in Sources */,
-				A74A25FB1DD0841F0027A2C3 /* MMWormholeSessionContextTransiting.m in Sources */,
 				A74A25D71DD081E10027A2C3 /* BDatagram_unix.c in Sources */,
 				A74A25AC1DD081E10027A2C3 /* DebugObject.c in Sources */,
 				A74A25B81DD081E10027A2C3 /* StreamPassInterface.c in Sources */,
@@ -1681,14 +1701,12 @@
 				A74A25B41DD081E10027A2C3 /* PacketProtoFlow.c in Sources */,
 				A74A25BB1DD081E10027A2C3 /* sys.c in Sources */,
 				A74A25D41DD081E10027A2C3 /* BSocksClient.c in Sources */,
-				A74A25FA1DD0841F0027A2C3 /* MMWormholeSession.m in Sources */,
 				A74A25A91DD081E10027A2C3 /* BLog.m in Sources */,
 				A74A25C11DD081E10027A2C3 /* ip4_addr.c in Sources */,
 				A74A25D61DD081E10027A2C3 /* BConnection_unix.c in Sources */,
 				A74A25B91DD081E10027A2C3 /* StreamRecvInterface.c in Sources */,
 				A74A25DA1DD081E10027A2C3 /* BSignal.c in Sources */,
 				A74A25D81DD081E10027A2C3 /* BNetwork.c in Sources */,
-				A74A25F81DD0841F0027A2C3 /* MMWormholeCoordinatedFileTransiting.m in Sources */,
 				A74A25E11DD081E10027A2C3 /* UdpGwClient.c in Sources */,
 				A74A25B61DD081E10027A2C3 /* PacketStreamSender.c in Sources */,
 				A74A25AE1DD081E10027A2C3 /* PacketBuffer.c in Sources */,
@@ -1701,11 +1719,9 @@
 				A74A25D51DD081E10027A2C3 /* BConnection_common.c in Sources */,
 				A74A25C41DD081E10027A2C3 /* ip6.c in Sources */,
 				A74A25CE1DD081E10027A2C3 /* tcp_in.c in Sources */,
-				A74A25F71DD0841F0027A2C3 /* MMWormhole.m in Sources */,
 				A74A25B31DD081E10027A2C3 /* PacketProtoEncoder.c in Sources */,
 				A74A25AD1DD081E10027A2C3 /* BufferWriter.c in Sources */,
 				A74A23E01DD07FCE0027A2C3 /* PacketTunnelProvider.m in Sources */,
-				A74A25FC1DD0841F0027A2C3 /* MMWormholeSessionFileTransiting.m in Sources */,
 				A74A25B51DD081E10027A2C3 /* PacketRecvInterface.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

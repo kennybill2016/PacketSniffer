@@ -37,6 +37,8 @@ public class Manager {
         }
     }
     
+    public let wormhole = MMWormhole(applicationGroupIdentifier: sharedGroupIdentifier, optionalDirectory: "wormhole")
+    
     var observerAdded: Bool = false
 
     private init() {
@@ -262,6 +264,7 @@ extension Manager {
                     complete?(nil, ManagerError.InvalidProvider)
                     return
                 }
+                print("loadandcreateprovidermanager status=%d",manager.connection.status)
                 if manager.connection.status == .disconnected || manager.connection.status == .invalid {
                     do {
                         try manager.connection.startVPNTunnel(options: options)

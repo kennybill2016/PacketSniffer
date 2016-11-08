@@ -26,6 +26,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Post an empty message so we could attach to packet tunnel process
+        Manager.sharedManager.postMessage()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
