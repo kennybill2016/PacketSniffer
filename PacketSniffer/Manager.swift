@@ -193,7 +193,7 @@ extension Manager {
         guard let fromURL = Bundle.main.url(forResource: "PacketSniffer", withExtension: "action") else {
             return
         }
-        let toURL = PacketSniffer.sharedUrl().appendingPathComponent("PacketSniffer.action")
+        let toURL = PacketSniffer.sharedUrl().appendingPathComponent("httpconf/PacketSniffer.action")
         if FileManager.default.fileExists(atPath: fromURL.path) {
             if FileManager.default.fileExists(atPath: toURL.path) {
                 try FileManager.default.removeItem(at: toURL)
@@ -264,9 +264,10 @@ extension Manager {
                     complete?(nil, ManagerError.InvalidProvider)
                     return
                 }
-                print("loadandcreateprovidermanager status=%d",manager.connection.status)
+                print("loadandcreateprovidermanager status=\(manager.connection.status)")
                 if manager.connection.status == .disconnected || manager.connection.status == .invalid {
                     do {
+                        Manager.sharedManager.postMessage()
                         try manager.connection.startVPNTunnel(options: options)
                         self.addVPNStatusObserver()
                         complete?(manager, nil)
@@ -320,6 +321,7 @@ extension Manager {
                 manager.localizedDescription = "PacketSniffer"
                 manager.protocolConfiguration?.serverAddress = "PacketSniffer"
                 manager.isOnDemandEnabled = true
+                manager.protocolConfiguration?.proxySettings=nil
                 let quickStartRule = NEOnDemandRuleEvaluateConnection()
                 quickStartRule.connectionRules = [NEEvaluateConnectionRule(matchDomains: ["packetsniffer.com"], andAction: NEEvaluateConnectionRuleAction.connectIfNeeded)]
                 manager.onDemandRules = [quickStartRule]

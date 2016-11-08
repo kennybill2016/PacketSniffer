@@ -89,7 +89,6 @@
 		A74A25E01DD081E10027A2C3 /* udpgw.c in Sources */ = {isa = PBXBuildFile; fileRef = A74A25A31DD081E10027A2C3 /* udpgw.c */; };
 		A74A25E11DD081E10027A2C3 /* UdpGwClient.c in Sources */ = {isa = PBXBuildFile; fileRef = A74A25A61DD081E10027A2C3 /* UdpGwClient.c */; };
 		A74A25E41DD082010027A2C3 /* TunnelInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25E21DD082010027A2C3 /* TunnelInterface.m */; };
-		A74A25E61DD083E30027A2C3 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A25E51DD083E30027A2C3 /* CocoaAsyncSocket.framework */; };
 		A74A26061DD085DE0027A2C3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A26051DD085DE0027A2C3 /* libresolv.tbd */; };
 		A74A26071DD086130027A2C3 /* ShadowPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A26031DD084A40027A2C3 /* ShadowPath.framework */; };
 		A74A9D761DD092DB00E45CC2 /* dns.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D751DD092DB00E45CC2 /* dns.m */; };
@@ -109,6 +108,13 @@
 		A74A9D971DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D881DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A74A9D981DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D891DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.m */; };
 		A74A9D991DD16E3400E45CC2 /* MMWormholeTransiting.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A9D8A1DD16E3400E45CC2 /* MMWormholeTransiting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74A9D9A1DD1BEF000E45CC2 /* PacketSnifferBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A239F1DD0718A0027A2C3 /* PacketSnifferBase.framework */; };
+		A74A9D9C1DD1C13E00E45CC2 /* ShadowPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A26031DD084A40027A2C3 /* ShadowPath.framework */; };
+		A74A9D9D1DD1C13E00E45CC2 /* ShadowPath.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A74A26031DD084A40027A2C3 /* ShadowPath.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A74A9DA11DD1C23500E45CC2 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A9DA01DD1C23500E45CC2 /* CocoaAsyncSocket.framework */; };
+		A74A9DA21DD1C24900E45CC2 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A9DA01DD1C23500E45CC2 /* CocoaAsyncSocket.framework */; };
+		A74A9DA31DD1C24900E45CC2 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A74A9DA01DD1C23500E45CC2 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A74A9DA41DD1C28E00E45CC2 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A9DA01DD1C23500E45CC2 /* CocoaAsyncSocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +139,13 @@
 			remoteGlobalIDString = B8DEFD7B1CE9C923003FC706;
 			remoteInfo = ShadowPath;
 		};
+		A74A9D9E1DD1C13E00E45CC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A74A25FE1DD084A30027A2C3 /* ShadowPath.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B8DEFD7A1CE9C923003FC706;
+			remoteInfo = ShadowPath;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -153,7 +166,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A74A9DA31DD1C24900E45CC2 /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				A74A23A71DD0718A0027A2C3 /* PacketSnifferBase.framework in Embed Frameworks */,
+				A74A9D9D1DD1C13E00E45CC2 /* ShadowPath.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,7 +626,6 @@
 		A74A25A71DD081E10027A2C3 /* UdpGwClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpGwClient.h; sourceTree = "<group>"; };
 		A74A25E21DD082010027A2C3 /* TunnelInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TunnelInterface.m; sourceTree = "<group>"; };
 		A74A25E31DD082010027A2C3 /* TunnelInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TunnelInterface.h; sourceTree = "<group>"; };
-		A74A25E51DD083E30027A2C3 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		A74A25FE1DD084A30027A2C3 /* ShadowPath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShadowPath.xcodeproj; path = ShadowPath/ShadowPath.xcodeproj; sourceTree = SOURCE_ROOT; };
 		A74A26051DD085DE0027A2C3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		A74A9D741DD092DB00E45CC2 /* dns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dns.h; sourceTree = "<group>"; };
@@ -631,6 +645,7 @@
 		A74A9D881DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeSessionMessageTransiting.h; sourceTree = "<group>"; };
 		A74A9D891DD16E3400E45CC2 /* MMWormholeSessionMessageTransiting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormholeSessionMessageTransiting.m; sourceTree = "<group>"; };
 		A74A9D8A1DD16E3400E45CC2 /* MMWormholeTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeTransiting.h; sourceTree = "<group>"; };
+		A74A9DA01DD1C23500E45CC2 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -638,7 +653,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74A9DA21DD1C24900E45CC2 /* CocoaAsyncSocket.framework in Frameworks */,
 				A74A23A61DD0718A0027A2C3 /* PacketSnifferBase.framework in Frameworks */,
+				A74A9D9C1DD1C13E00E45CC2 /* ShadowPath.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +663,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74A9DA11DD1C23500E45CC2 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,9 +671,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74A9DA41DD1C28E00E45CC2 /* CocoaAsyncSocket.framework in Frameworks */,
+				A74A9D9A1DD1BEF000E45CC2 /* PacketSnifferBase.framework in Frameworks */,
 				A74A26071DD086130027A2C3 /* ShadowPath.framework in Frameworks */,
 				A74A26061DD085DE0027A2C3 /* libresolv.tbd in Frameworks */,
-				A74A25E61DD083E30027A2C3 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +684,7 @@
 		A74A23681DD06F310027A2C3 = {
 			isa = PBXGroup;
 			children = (
+				A74A9DA01DD1C23500E45CC2 /* CocoaAsyncSocket.framework */,
 				A74A23731DD06F320027A2C3 /* PacketSniffer */,
 				A74A23DB1DD07FCE0027A2C3 /* PacketTunnel */,
 				A74A23A01DD0718A0027A2C3 /* PacketSnifferBase */,
@@ -738,7 +758,6 @@
 				A74A25E21DD082010027A2C3 /* TunnelInterface.m */,
 				A74A9D741DD092DB00E45CC2 /* dns.h */,
 				A74A9D751DD092DB00E45CC2 /* dns.m */,
-				A74A25E51DD083E30027A2C3 /* CocoaAsyncSocket.framework */,
 				A74A23E91DD080B80027A2C3 /* ProxyManager.h */,
 				A74A23E81DD080B80027A2C3 /* ProxyManager.m */,
 				A74A23DE1DD07FCE0027A2C3 /* PacketTunnelProvider.h */,
@@ -1486,6 +1505,7 @@
 			dependencies = (
 				A74A23A51DD0718A0027A2C3 /* PBXTargetDependency */,
 				A74A23E31DD07FCE0027A2C3 /* PBXTargetDependency */,
+				A74A9D9F1DD1C13E00E45CC2 /* PBXTargetDependency */,
 			);
 			name = PacketSniffer;
 			productName = PacketSniffer;
@@ -1540,7 +1560,7 @@
 					A74A23701DD06F310027A2C3 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = SN4R88999J;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1549,13 +1569,17 @@
 					};
 					A74A239E1DD0718A0027A2C3 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = SN4R88999J;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					A74A23D91DD07FCE0027A2C3 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = SN4R88999J;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1739,6 +1763,11 @@
 			target = A74A23D91DD07FCE0027A2C3 /* PacketTunnel */;
 			targetProxy = A74A23E21DD07FCE0027A2C3 /* PBXContainerItemProxy */;
 		};
+		A74A9D9F1DD1C13E00E45CC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ShadowPath;
+			targetProxy = A74A9D9E1DD1C13E00E45CC2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1877,11 +1906,17 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SN4R88999J;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PacketSniffer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ljw.packetsniffer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ddbbc002-7f5c-40b7-8287-97370554ce8b";
+				PROVISIONING_PROFILE_SPECIFIER = packetsniffer_dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1894,11 +1929,17 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SN4R88999J;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PacketSniffer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ljw.packetsniffer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ddbbc002-7f5c-40b7-8287-97370554ce8b";
+				PROVISIONING_PROFILE_SPECIFIER = packetsniffer_dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -1909,13 +1950,18 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = SN4R88999J;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PacketSnifferBase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ljw.PacketSnifferBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1933,13 +1979,18 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = SN4R88999J;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PacketSnifferBase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ljw.PacketSnifferBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1959,6 +2010,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PacketTunnel",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1973,9 +2025,19 @@
 					BADVPN_LIBTSOCKS,
 				);
 				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PacketTunnel/Shadowsocks/libsodium-ios/lib",
+					"$(PROJECT_DIR)/PacketTunnel",
+					"$(PROJECT_DIR)/ShadowPath/ShadowPath/Antinat/expat-lib/lib",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ljw.packetsniffer.packettunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8cb4a607-f9c7-4e1e-a625-3879810753e1";
+				PROVISIONING_PROFILE_SPECIFIER = packettunnel_dev;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(inherited) \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS\" \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS/lwip/src/include\" \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS/lwip/custom\" \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS/lwip/src/include/ipv4\" \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS/lwip/src/include/ipv6\"";
 			};
@@ -1989,6 +2051,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PacketTunnel",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -2002,9 +2065,19 @@
 					BADVPN_LIBTSOCKS,
 				);
 				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PacketTunnel/Shadowsocks/libsodium-ios/lib",
+					"$(PROJECT_DIR)/PacketTunnel",
+					"$(PROJECT_DIR)/ShadowPath/ShadowPath/Antinat/expat-lib/lib",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ljw.packetsniffer.packettunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "daa1afca-25ea-4711-9575-ec956414fdf8";
+				PROVISIONING_PROFILE_SPECIFIER = packettunnel_dev;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(inherited) \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS\" \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS/lwip/src/include\" \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS/lwip/custom\" \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS/lwip/src/include/ipv4\" \"$(SRCROOT)/$(TARGET_NAME)/tun2socks-iOS/lwip/src/include/ipv6\"";
 			};

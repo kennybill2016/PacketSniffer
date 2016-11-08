@@ -197,7 +197,7 @@ int sock_port (int fd) {
 
 - (void)setupWormhole {
     NSLog(@"test setupWormhole begin");
-    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.vpn.agent" optionalDirectory:@"wormhole"];
+    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:sharedGroupIdentifier optionalDirectory:@"wormhole"];
     __weak typeof(self) weakSelf = self;
     [self.wormhole listenForMessageWithIdentifier:@"getTunnelStatus" listener:^(id  _Nullable messageObject) {
         [weakSelf.wormhole passMessageObject:@"ok" identifier:@"tunnelStatus"];

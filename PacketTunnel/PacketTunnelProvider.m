@@ -101,7 +101,7 @@
 }
 
 - (void)setupWormhole {
-    /* self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.360.freewifi" optionalDirectory:@"wormhole"];
+    /* self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.ljw.packettunnel" optionalDirectory:@"wormhole"];
      __weak typeof(self) weakSelf = self;
      [self.wormhole listenForMessageWithIdentifier:@"getTunnelStatus" listener:^(id  _Nullable messageObject) {
      [weakSelf.wormhole passMessageObject:@"ok" identifier:@"tunnelStatus"];
