@@ -10,7 +10,6 @@
 #import <ShadowPath/ShadowPath.h>
 #import <netinet/in.h>
 #import "PacketSnifferBase.h"
-#import "MMWormhole.h"
 
 @interface ProxyManager ()
 @property (nonatomic) BOOL socksProxyRunning;
@@ -25,8 +24,6 @@
 - (void)onSocksProxyCallback: (int)fd;
 - (void)onHttpProxyCallback: (int)fd;
 - (void)onShadowsocksCallback:(int)fd;
-
-@property (nonatomic) MMWormhole *wormhole;
 
 @end
 
@@ -59,7 +56,7 @@ int sock_port (int fd) {
     static ProxyManager *manager;
     dispatch_once(&onceToken, ^{
         manager = [ProxyManager new];
-        [manager setupWormhole];
+//        [manager setupWormhole];
     });
     return manager;
 }
@@ -159,7 +156,7 @@ int sock_port (int fd) {
     // content中包含的是http代理的过滤规则
     [content writeToURL:actionURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
 
-    NSLog(@"startHttpProxy content=%@",content);
+//    NSLog(@"startHttpProxy content=%@",content);
     
     [NSThread detachNewThreadSelector:@selector(_startHttpProxy:) toTarget:self withObject:confURL];
 }
@@ -193,57 +190,6 @@ int sock_port (int fd) {
     if (self.httpCompletion) {
         self.httpCompletion(self.httpProxyPort, error);
     }
-}
-
-- (void)setupWormhole {
-    NSLog(@"test setupWormhole begin");
-    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:sharedGroupIdentifier optionalDirectory:@"wormhole"];
-    __weak typeof(self) weakSelf = self;
-    [self.wormhole listenForMessageWithIdentifier:@"getTunnelStatus" listener:^(id  _Nullable messageObject) {
-        [weakSelf.wormhole passMessageObject:@"ok" identifier:@"tunnelStatus"];
-    }];
-    [self.wormhole listenForMessageWithIdentifier:@"stopTunnel" listener:^(id  _Nullable messageObject) {
-//        [weakSelf stop];
-    }];
-    [self.wormhole listenForMessageWithIdentifier:@"getTunnelConnectionRecords" listener:^(id  _Nullable messageObject) {
-        NSMutableArray *records = [NSMutableArray array];
-          struct log_client_states *p = log_clients;
-         while (p) {
-         struct client_state *client = p->csp;
-         NSMutableDictionary *d = [NSMutableDictionary dictionary];
-         char *url = client->http->url;
-         if (url ==  NULL) {
-         p = p->next;
-         continue;
-         }
-         d[@"url"] = [NSString stringWithCString:url encoding:NSUTF8StringEncoding];
-         d[@"method"] = @(client->http->gpc);
-         for (int i=0; i < STATUS_COUNT; i++) {
-         d[[NSString stringWithFormat:@"time%d", i]] = @(client->timestamp[i]);
-         }
-         d[@"version"] = @(client->http->ver);
-         if (client->rule && client->rule->rule) {
-         d[@"rule"] = [NSString stringWithCString:client->rule->rule encoding:NSUTF8StringEncoding];
-         }
-         d[@"global"] = @(global_mode);
-         //            if (p->headers) {
-         //                d[@"headers"] = [NSString stringWithCString:p->headers->string encoding:NSUTF8StringEncoding];
-         //            }
-         //            if (p->rule) {
-         //                d[@"ruleType"] = @(p->rule->type),
-         //                d[@"ruleAction"] = @(p->rule->action),
-         //                d[@"ruleValue"] = [NSString stringWithCString:p->rule->value encoding:NSUTF8StringEncoding];
-         //            }
-         
-         d[@"responseCode"] = @(client->http->status);
-         [records addObject:d];
-         p = p->next;
-         }
-        NSString *result = [records jsonString];
-        NSLog(@"testMMWormhole result=%@",result);
-        [weakSelf.wormhole passMessageObject:result identifier:@"tunnelConnectionRecords"];
-    }];
-    NSLog(@"test setupWormhole end");
 }
 
 @end

@@ -35,6 +35,12 @@ class RecentRequestsCell: UITableViewCell {
             startConnectBtn.isHidden = false
             leftLabel.isHidden = true
             rightLabel.isHidden = true
+            if(Manager.sharedManager.vpnStatus == .On) {
+                startConnectBtn.setTitle("Disconnect".localized(), for: UIControlState.normal)
+            }
+            else {
+                startConnectBtn.setTitle("Connect".localized(), for: UIControlState.normal)
+            }
             
         case 0,1:
             if(indexPath.row==0) {

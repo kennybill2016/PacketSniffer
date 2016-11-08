@@ -19,6 +19,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.title = "App Name".localized()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onVPNStatusChanged), name: NSNotification.Name(rawValue: kProxyServiceVPNStatusNotification), object: nil)
         do {
             try Manager.sharedManager.setup()
         }catch {
@@ -34,6 +36,10 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func onVPNStatusChanged() {
+        tableview.reloadData()
     }
     
     // MARK: - TableView DataSource & Delegate
