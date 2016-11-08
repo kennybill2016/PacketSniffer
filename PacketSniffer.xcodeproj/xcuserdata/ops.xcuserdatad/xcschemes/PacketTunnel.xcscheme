@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A74A238B1DD0710D0027A2C3"
+               BlueprintIdentifier = "A74A23D91DD07FCE0027A2C3"
                BuildableName = "PacketTunnel.appex"
                BlueprintName = "PacketTunnel"
                ReferencedContainer = "container:PacketSniffer.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A74A238B1DD0710D0027A2C3"
+            BlueprintIdentifier = "A74A23D91DD07FCE0027A2C3"
             BuildableName = "PacketTunnel.appex"
             BlueprintName = "PacketTunnel"
             ReferencedContainer = "container:PacketSniffer.xcodeproj">

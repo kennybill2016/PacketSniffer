@@ -27,7 +27,6 @@
 		A74A23CA1DD0791C0027A2C3 /* JSONUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A23C61DD0791C0027A2C3 /* JSONUtils.m */; };
 		A74A23CB1DD0791C0027A2C3 /* PacketSniffer.h in Headers */ = {isa = PBXBuildFile; fileRef = A74A23C71DD0791C0027A2C3 /* PacketSniffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A74A23CC1DD0791C0027A2C3 /* PacketSniffer.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A23C81DD0791C0027A2C3 /* PacketSniffer.m */; };
-		A74A23CF1DD07B1F0027A2C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74A23D11DD07B1F0027A2C3 /* Localizable.strings */; };
 		A74A23D41DD07D820027A2C3 /* PacketSniffer.action in Resources */ = {isa = PBXBuildFile; fileRef = A74A23D31DD07D820027A2C3 /* PacketSniffer.action */; };
 		A74A23E01DD07FCE0027A2C3 /* PacketTunnelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A23DF1DD07FCE0027A2C3 /* PacketTunnelProvider.m */; };
 		A74A23E41DD07FCE0027A2C3 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A74A23DA1DD07FCE0027A2C3 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -100,6 +99,8 @@
 		A74A25FD1DD0841F0027A2C3 /* MMWormholeSessionMessageTransiting.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A25F51DD0841F0027A2C3 /* MMWormholeSessionMessageTransiting.m */; };
 		A74A26061DD085DE0027A2C3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A26051DD085DE0027A2C3 /* libresolv.tbd */; };
 		A74A26071DD086130027A2C3 /* ShadowPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A26031DD084A40027A2C3 /* ShadowPath.framework */; };
+		A74A9D761DD092DB00E45CC2 /* dns.m in Sources */ = {isa = PBXBuildFile; fileRef = A74A9D751DD092DB00E45CC2 /* dns.m */; };
+		A74A9D771DD0962B00E45CC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74A23D11DD07B1F0027A2C3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -620,6 +621,8 @@
 		A74A25F61DD0841F0027A2C3 /* MMWormholeTransiting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormholeTransiting.h; sourceTree = "<group>"; };
 		A74A25FE1DD084A30027A2C3 /* ShadowPath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShadowPath.xcodeproj; path = ShadowPath/ShadowPath.xcodeproj; sourceTree = SOURCE_ROOT; };
 		A74A26051DD085DE0027A2C3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		A74A9D741DD092DB00E45CC2 /* dns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dns.h; sourceTree = "<group>"; };
+		A74A9D751DD092DB00E45CC2 /* dns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dns.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -721,11 +724,13 @@
 			isa = PBXGroup;
 			children = (
 				A74A25FE1DD084A30027A2C3 /* ShadowPath.xcodeproj */,
-				A74A25E71DD0841F0027A2C3 /* MMWormhole */,
-				A74A25E51DD083E30027A2C3 /* CocoaAsyncSocket.framework */,
+				A74A23ED1DD081E00027A2C3 /* tun2socks-iOS */,
 				A74A25E31DD082010027A2C3 /* TunnelInterface.h */,
 				A74A25E21DD082010027A2C3 /* TunnelInterface.m */,
-				A74A23ED1DD081E00027A2C3 /* tun2socks-iOS */,
+				A74A9D741DD092DB00E45CC2 /* dns.h */,
+				A74A9D751DD092DB00E45CC2 /* dns.m */,
+				A74A25E71DD0841F0027A2C3 /* MMWormhole */,
+				A74A25E51DD083E30027A2C3 /* CocoaAsyncSocket.framework */,
 				A74A23E91DD080B80027A2C3 /* ProxyManager.h */,
 				A74A23E81DD080B80027A2C3 /* ProxyManager.m */,
 				A74A23DE1DD07FCE0027A2C3 /* PacketTunnelProvider.h */,
@@ -1583,6 +1588,7 @@
 				A74A237F1DD06F320027A2C3 /* LaunchScreen.storyboard in Resources */,
 				A74A23BC1DD073390027A2C3 /* template.bundle in Resources */,
 				A74A23BA1DD073390027A2C3 /* GeoLite2-Country.mmdb in Resources */,
+				A74A9D771DD0962B00E45CC2 /* Localizable.strings in Resources */,
 				A74A237C1DD06F320027A2C3 /* Assets.xcassets in Resources */,
 				A74A23D41DD07D820027A2C3 /* PacketSniffer.action in Resources */,
 				A74A237A1DD06F320027A2C3 /* Main.storyboard in Resources */,
@@ -1594,7 +1600,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A74A23CF1DD07B1F0027A2C3 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1669,6 +1674,7 @@
 				A74A25C01DD081E10027A2C3 /* ip4.c in Sources */,
 				A74A25BA1DD081E10027A2C3 /* PacketPassInactivityMonitor.c in Sources */,
 				A74A25B11DD081E10027A2C3 /* PacketPassInterface.c in Sources */,
+				A74A9D761DD092DB00E45CC2 /* dns.m in Sources */,
 				A74A25C31DD081E10027A2C3 /* icmp6.c in Sources */,
 				A74A25CD1DD081E10027A2C3 /* tcp.c in Sources */,
 				A74A25CA1DD081E10027A2C3 /* netif.c in Sources */,
@@ -1769,6 +1775,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1820,6 +1827,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

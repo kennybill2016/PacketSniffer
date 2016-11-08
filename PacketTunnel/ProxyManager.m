@@ -63,27 +63,10 @@ int sock_port (int fd) {
     });
     return manager;
 }
-/*
-<?xml version="1.0" encoding="UTF-8"?>
-<antinatconfig>
-<interface value="127.0.0.1">
-<port value="0">
-<maxbindwait value="10">
-<chain name="shadowsocks proxy name">
-<uri value="socks5://127.0.0.1:${ssport}">
-<authscheme value="anonymous">
-<authchoice>
-<select mechanism="anonymous">
-</antinatconfig>*/
-//<antinatconfig><interface value="127.0.0.1"/><port value="0"/><maxbindwait value="10"/><authchoice><select mechanism="anonymous"/></authchoice><filter><accept/></filter></antinatconfig>
 
 - (void)startSocksProxy:(SocksProxyCompletion)completion {
     self.socksCompletion = [completion copy];
-    char *path = strdup([[[NSBundle mainBundle] pathForResource:@"test" ofType:@"xml"] UTF8String]);
-    NSString *confContent = [NSString stringWithCString:path encoding:NSUTF8StringEncoding];
-//    NSString *confContent = [NSString stringWithContentsOfURL:[PacketSniffer sharedSocksConfUrl] encoding:NSUTF8StringEncoding error:nil];
-    NSData *data = [[NSData alloc] initWithContentsOfFile:confContent];
-    confContent = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *confContent = [NSString stringWithContentsOfURL:[PacketSniffer sharedSocksConfUrl] encoding:NSUTF8StringEncoding error:nil];
     confContent = [confContent stringByReplacingOccurrencesOfString:@"${ssport}" withString:[NSString stringWithFormat:@"%d", [self shadowsocksProxyPort]]];
     NSLog(@"startSocksProxy content=%@,port=%d",confContent,[self shadowsocksProxyPort]);
     int fd = [[AntinatServer sharedServer] startWithConfig:confContent];
@@ -119,19 +102,11 @@ int sock_port (int fd) {
     NSString *confContent = [NSString stringWithContentsOfURL:[PacketSniffer sharedProxyConfUrl] encoding:NSUTF8StringEncoding error:nil];
     NSDictionary *json = [confContent jsonDictionary];
     NSString *host = json[@"host"];
-    host = @"vpnmanager.com";
     NSNumber *port = json[@"port"];
-    port = [NSNumber numberWithInteger:0];
     NSString *password = json[@"password"];
-    password = @"12345";
     NSString *authscheme = json[@"authscheme"];
-    authscheme = @"bf-cfb";
-    NSString *protocol = json[@"protocol"];
-    NSString *obfs = json[@"obfs"];
-    NSString *obfs_param = json[@"obfs_param"];
     BOOL ota = [json[@"ota"] boolValue];
-    ota = 0;
-    if (0 &&host && port && password && authscheme) {
+    if (host && port && password && authscheme) {
         profile_t profile;
         memset(&profile, 0, sizeof(profile_t));
         profile.remote_host = strdup([host UTF8String]);
@@ -142,17 +117,7 @@ int sock_port (int fd) {
         profile.local_port = 0;
         profile.timeout = 600;
         profile.auth = ota;
-        if (protocol.length > 0) {
-            profile.protocol = strdup([protocol UTF8String]);
-        }
-        if (obfs.length > 0) {
-            profile.obfs = strdup([obfs UTF8String]);
-        }
-        if (obfs_param.length > 0) {
-            profile.obfs_param = strdup([obfs_param UTF8String]);
-        }
-        int nRet = start_ss_local_server(profile, shadowsocks_handler, (__bridge void *)self);
-        int k = 1;
+        start_ss_local_server(profile, shadowsocks_handler, (__bridge void *)self);
     }else {
         if (self.shadowsocksCompletion) {
             self.shadowsocksCompletion(0, nil);
@@ -183,65 +148,20 @@ int sock_port (int fd) {
 - (void)startHttpProxy:(HttpProxyCompletion)completion {
     self.httpCompletion = [completion copy];
     // Do any additional setup after loading the view, typically from a nib.
-    NSURL *confURL = [PacketSniffer sharedUrl];
+    NSURL *confURL = [PacketSniffer sharedHttpProxyConfUrl];
+    NSString *content = [NSString stringWithContentsOfURL:confURL encoding:NSUTF8StringEncoding error:nil];
+    content = [content stringByReplacingOccurrencesOfString:@"${ssport}" withString:[NSString stringWithFormat:@"%d", self.shadowsocksProxyPort]];
+    [content writeToURL:confURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    
+    NSURL *actionURL = [[PacketSniffer sharedUrl] URLByAppendingPathComponent:@"httpconf/PacketSniffer.action"];
+    content = [NSString stringWithContentsOfURL:actionURL encoding:NSUTF8StringEncoding error:nil];
+    content = [content stringByReplacingOccurrencesOfString:@"${ssport}" withString:[NSString stringWithFormat:@"%d", self.shadowsocksProxyPort]];
+    // content中包含的是http代理的过滤规则
+    [content writeToURL:actionURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
 
-    NSString *httpPath = [[NSBundle mainBundle] pathForResource:@"http" ofType:@"xxx"];
-    NSString *httpContent = [NSString stringWithContentsOfFile:httpPath encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"startHttpProxy content=%@",content);
     
-    NSURL* confDirUrl = [confURL URLByAppendingPathComponent:@"httpconf"];
-    NSString* templateDirPath = [confURL URLByAppendingPathComponent:@"httptemplate"].path;
-    NSString* logDir = [confURL URLByAppendingPathComponent:@"log"].path;
-    NSURL* actionUrl = [confDirUrl URLByAppendingPathComponent:@"PacketSniffer.action"];
-    NSURL* logfileUrl = [[confURL URLByAppendingPathComponent:@"log"] URLByAppendingPathComponent:@"privoxy.log"];
-    
-    [[NSFileManager defaultManager] createDirectoryAtPath:confDirUrl.path withIntermediateDirectories:TRUE attributes:nil error:nil];
-    [[NSFileManager defaultManager] createDirectoryAtPath:templateDirPath withIntermediateDirectories:TRUE attributes:nil error:nil];
-    [[NSFileManager defaultManager] createDirectoryAtPath:logDir withIntermediateDirectories:TRUE attributes:nil error:nil];
-    [[NSFileManager defaultManager] createFileAtPath:logfileUrl.path contents:nil attributes:nil];
-    
-    NSString* packetPath= [NSString stringWithFormat:@"%@", [NSString stringWithString:[NSBundle mainBundle].bundlePath]].copy;
-
-    NSError* err;
-    NSString* sourcePath = [packetPath stringByAppendingPathComponent:@"httptemplate"];
-    NSArray* fileArray = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:sourcePath error:nil];
-    for(NSString* filesItem in fileArray) {
-        if(![[NSFileManager defaultManager] fileExistsAtPath:[templateDirPath stringByAppendingPathComponent:filesItem]]) {
-            [[NSFileManager defaultManager] copyItemAtPath:[sourcePath stringByAppendingPathComponent:filesItem] toPath:[templateDirPath stringByAppendingPathComponent:filesItem] error:&err];
-            if(err)
-                NSLog(@"sourcePath=%@,error=%@",[sourcePath stringByAppendingPathComponent:filesItem],err);
-        }
-    }
-    
-    sourcePath = [packetPath stringByAppendingPathComponent:@"GeoLite2-Country.mmdb"];
-    NSString* destCountryPath = [confURL.path stringByAppendingPathComponent:@"GeoLite2-Country.mmdb"];
-    if(![[NSFileManager defaultManager] fileExistsAtPath:destCountryPath]) {
-        [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:destCountryPath error:&err];
-        if(err)
-            NSLog(@"sourcePath=%@,error=%@",sourcePath,err);
-    }
-
-    //generator action file
-    NSString* confPath = [packetPath stringByAppendingPathComponent:@"httpconf"];
-    NSString* actionFile = [confPath stringByAppendingPathComponent:@"potatso.action"];
-    NSString *actionContent = [NSString stringWithContentsOfFile:actionFile encoding:NSUTF8StringEncoding error:nil];
-    [actionContent writeToURL:actionUrl atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    
-    // 这里拿出来的是如上所示的数组拼出来的字符串
-    httpContent = [httpContent stringByReplacingOccurrencesOfString:@"${confdir}" withString:confDirUrl.path];
-    httpContent = [httpContent stringByReplacingOccurrencesOfString:@"${ssport}" withString:[NSString stringWithFormat:@"%d", self.shadowsocksProxyPort]];
-    httpContent = [httpContent stringByReplacingOccurrencesOfString:@"${templdir}" withString:templateDirPath];
-    httpContent = [httpContent stringByReplacingOccurrencesOfString:@"${actionsfile}" withString:actionUrl.path];
-    httpContent = [httpContent stringByReplacingOccurrencesOfString:@"${logdir}" withString:logDir];
-    httpContent = [httpContent stringByReplacingOccurrencesOfString:@"${logfile}" withString:logfileUrl.path];
-    httpContent = [httpContent stringByReplacingOccurrencesOfString:@"${mmdbpath}" withString:destCountryPath];
-    
-
-    [httpContent writeToURL:[PacketSniffer sharedHttpProxyConfUrl] atomically:YES encoding:NSUTF8StringEncoding error:&err];
-    if(err) {
-        NSLog(@"startHttpProxy err =%@",err);
-    }
-    NSLog(@"httpContent=%@",httpContent);
-    [NSThread detachNewThreadSelector:@selector(_startHttpProxy:) toTarget:self withObject:[PacketSniffer sharedHttpProxyConfUrl]];
+    [NSThread detachNewThreadSelector:@selector(_startHttpProxy:) toTarget:self withObject:confURL];
 }
 
 - (void)_startHttpProxy: (NSURL *)confURL {
